@@ -25,13 +25,18 @@ const TargetAudience = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-poppins font-bold text-graphite mb-4">
+    <section className="py-24 bg-white relative overflow-hidden">
+      {/* Tech pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,hsl(var(--primary))_2px,transparent_2px)] bg-[length:60px_60px]"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-poppins font-black text-graphite mb-6 tracking-tight">
             Para Quem é o Certificado Digital?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Soluções personalizadas para diferentes necessidades profissionais
           </p>
         </div>
@@ -40,16 +45,16 @@ const TargetAudience = () => {
           {audiences.map((audience, index) => (
             <div 
               key={index}
-              className="benefit-card text-center group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="benefit-card text-center group animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="mb-6 flex justify-center">
-                <div className="p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
+              <div className="mb-8 flex justify-center">
+                <div className="p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-500 border border-primary/20 group-hover:border-primary/40 shadow-medium group-hover:shadow-strong">
                   {audience.icon}
                 </div>
               </div>
               
-              <h3 className="text-xl font-poppins font-semibold text-graphite mb-3">
+              <h3 className="text-xl font-poppins font-bold text-graphite mb-4 leading-tight">
                 {audience.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

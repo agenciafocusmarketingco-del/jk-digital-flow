@@ -3,9 +3,14 @@ import jkLogo from "@/assets/jk-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-graphite text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12">
+    <footer className="bg-gradient-to-br from-graphite via-graphite to-primary/20 text-white py-20 relative overflow-hidden">
+      {/* Tech pattern overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,hsl(var(--primary))_1px,transparent_1px)] bg-[length:30px_30px]"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative">
+        <div className="grid md:grid-cols-3 gap-16">
           {/* Logo e informações */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">

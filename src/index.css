@@ -47,15 +47,19 @@
 
     --radius: 0.75rem;
 
-    /* Custom gradients for JK */
-    --gradient-primary: linear-gradient(135deg, hsl(159 100% 33%), hsl(159 100% 28%));
-    --gradient-hero: linear-gradient(135deg, hsl(159 100% 33%) 0%, hsl(209 78% 50%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 33% 97%) 100%);
+    /* Custom gradients for JK - Enhanced tech-corporate style */
+    --gradient-primary: linear-gradient(135deg, hsl(159 100% 33%) 0%, hsl(159 100% 25%) 50%, hsl(159 85% 20%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(210 33% 97%) 0%, hsl(210 40% 94%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(159 100% 33%) 0%, hsl(159 100% 28%) 35%, hsl(209 78% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 33% 98%) 50%, hsl(210 33% 96%) 100%);
+    --gradient-tech: linear-gradient(135deg, hsl(210 33% 97%) 0%, hsl(0 0% 100%) 50%, hsl(210 33% 97%) 100%);
+    --gradient-overlay: linear-gradient(135deg, hsl(159 100% 33% / 0.1) 0%, hsl(209 78% 50% / 0.05) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(159 100% 33% / 0.1);
-    --shadow-medium: 0 8px 30px -8px hsl(159 100% 33% / 0.15);
-    --shadow-strong: 0 20px 60px -12px hsl(159 100% 33% / 0.25);
+    /* Enhanced shadows with depth */
+    --shadow-soft: 0 2px 15px -3px hsl(159 30% 20% / 0.08), 0 4px 6px -2px hsl(159 30% 20% / 0.05);
+    --shadow-medium: 0 4px 25px -5px hsl(159 30% 20% / 0.12), 0 8px 10px -6px hsl(159 30% 20% / 0.08);
+    --shadow-strong: 0 10px 40px -10px hsl(159 30% 20% / 0.2), 0 20px 25px -5px hsl(159 30% 20% / 0.1);
+    --shadow-glow: 0 0 30px hsl(159 100% 33% / 0.3), 0 0 60px hsl(159 100% 33% / 0.1);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,56 +135,145 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins font-semibold;
+    @apply font-poppins font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-6xl font-black;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl lg:text-2xl font-bold;
+  }
+
+  p {
+    @apply font-inter font-normal leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base lg:text-lg leading-relaxed text-muted-foreground;
   }
 }
 
 @layer components {
-  /* Hero button with gradient */
+  /* Hero button with enhanced pill design and premium effects */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-accent text-white font-semibold px-8 py-4 rounded-xl;
-    @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
-    @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+    @apply bg-gradient-primary text-white font-bold px-10 py-4 rounded-full;
+    @apply transition-all duration-300 hover:shadow-strong hover:scale-[1.02] hover:-translate-y-0.5;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30 active:scale-[0.98];
+    @apply relative overflow-hidden;
   }
 
-  /* Secondary CTA button */
+  .btn-hero::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0;
+    @apply translate-x-[-100%] transition-transform duration-700;
+  }
+
+  .btn-hero:hover::before {
+    @apply translate-x-[100%];
+  }
+
+  /* Secondary CTA button with modern glass effect */
   .btn-secondary {
-    @apply bg-white border-2 border-primary text-primary font-semibold px-8 py-4 rounded-xl;
-    @apply transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg;
-    @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+    @apply bg-white/90 backdrop-blur-sm border-2 border-primary/30 text-primary font-bold px-10 py-4 rounded-full;
+    @apply transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-medium hover:border-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30 hover:scale-[1.02] hover:-translate-y-0.5;
   }
 
-  /* Benefit cards */
+  /* Enhanced benefit cards with tech-corporate styling */
   .benefit-card {
-    @apply bg-white rounded-2xl p-8 shadow-sm border border-border;
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply bg-gradient-card rounded-3xl p-8 shadow-medium border border-border/50;
+    @apply transition-all duration-500 hover:shadow-strong hover:-translate-y-2 hover:border-primary/30;
+    @apply backdrop-blur-sm relative overflow-hidden group;
   }
 
-  /* Step cards */
+  .benefit-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-overlay opacity-0 transition-opacity duration-500;
+  }
+
+  .benefit-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Step cards with timeline connectivity */
   .step-card {
-    @apply bg-gradient-to-br from-white to-secondary rounded-2xl p-6;
-    @apply border border-border transition-all duration-300 hover:shadow-md;
+    @apply bg-gradient-tech rounded-2xl p-8 relative;
+    @apply border border-border/50 transition-all duration-500 hover:shadow-medium hover:-translate-y-1;
+    @apply backdrop-blur-sm overflow-hidden group;
   }
 
-  /* Plan cards */
+  /* Enhanced plan cards with premium styling */
   .plan-card {
-    @apply bg-white rounded-2xl p-8 border-2 border-border;
-    @apply transition-all duration-300 hover:border-primary hover:shadow-lg;
+    @apply bg-gradient-card rounded-3xl p-10 border-2 border-border/50 relative overflow-hidden;
+    @apply transition-all duration-500 hover:border-primary/50 hover:shadow-strong hover:-translate-y-1;
+    @apply backdrop-blur-sm group;
   }
 
-  /* Testimonial cards */
+  .plan-card::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 transition-transform duration-500;
+  }
+
+  .plan-card:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Testimonial cards with glass morphism */
   .testimonial-card {
-    @apply bg-gradient-to-br from-white to-secondary rounded-xl p-6;
-    @apply border border-border transition-all duration-300 hover:shadow-md;
+    @apply bg-white/80 backdrop-blur-md rounded-2xl p-8;
+    @apply border border-white/20 shadow-medium transition-all duration-500 hover:shadow-strong;
+    @apply hover:-translate-y-1 hover:bg-white/90;
   }
 
-  /* Smooth animations */
+  /* Smooth animations with tech feel */
   .animate-fade-in {
     animation: fade-in 0.6s ease-out forwards;
   }
 
   .animate-slide-up {
     animation: slide-up 0.8s ease-out forwards;
+  }
+
+  /* Enhanced icon hover effects */
+  .icon-hover {
+    @apply transition-all duration-300 hover:scale-110 hover:text-primary;
+  }
+
+  /* Enhanced card gradients for depth */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-strong;
+  }
+
+  /* Scroll-triggered animations */
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-on-scroll {
+      @apply opacity-0 translate-y-8 transition-all duration-700;
+    }
+    
+    .animate-on-scroll.in-view {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+
+  /* Premium button effects */
+  .btn-premium {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent;
+    @apply translate-x-[-200%] transition-transform duration-700;
+  }
+
+  .btn-premium:hover::before {
+    @apply translate-x-[200%];
   }
 }
 

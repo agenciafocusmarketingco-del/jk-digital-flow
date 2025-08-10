@@ -30,13 +30,17 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-poppins font-bold text-graphite mb-4">
+    <section id="beneficios" className="py-24 bg-white relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-primary opacity-10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-br from-accent to-primary opacity-10 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-poppins font-black text-graphite mb-6 tracking-tight">
             Por que escolher a JK Certificadora?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Tecnologia de ponta com atendimento humano para sua segurança digital
           </p>
         </div>
@@ -45,15 +49,15 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="benefit-card text-center group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="benefit-card text-center group animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="mb-4 flex justify-center">
-                <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+              <div className="mb-6 flex justify-center">
+                <div className="p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-500 border border-primary/20 group-hover:border-primary/40">
                   {benefit.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-poppins font-semibold text-graphite mb-3">
+              <h3 className="text-xl font-poppins font-bold text-graphite mb-4 leading-tight">
                 {benefit.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

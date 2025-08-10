@@ -8,14 +8,18 @@ const Plans = () => {
   const agendamentoCTA = "https://calendly.com/jkcert/atendimento";
 
   return (
-    <section id="planos" className="py-20 bg-gradient-to-br from-secondary via-white to-accent/5">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-poppins font-bold text-graphite mb-4">
+    <section id="planos" className="py-24 bg-gradient-to-br from-secondary via-white to-accent/5 relative overflow-hidden">
+      {/* Decorative tech elements */}
+      <div className="absolute top-20 right-0 w-64 h-64 bg-gradient-primary opacity-5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-0 w-48 h-48 bg-gradient-to-br from-accent to-primary opacity-5 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-poppins font-black text-graphite mb-6 tracking-tight">
             Escolha o Plano Ideal
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Certificados A1 e A3 com valores competitivos e suporte completo
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Certificados A1 e A3 com valores competitivos e suporte completo para sua segurança digital
           </p>
         </div>
 
