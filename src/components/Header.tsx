@@ -13,7 +13,7 @@ const Header = () => {
               <img 
                 src={jkLogo} 
                 alt="JK Certificadora Digital" 
-                className="h-12 w-12 transition-transform duration-300 hover:scale-110"
+                className="h-16 w-16 transition-transform duration-300 hover:scale-110"
               />
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full animate-glow"></div>
             </div>
