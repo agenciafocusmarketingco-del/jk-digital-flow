@@ -189,7 +189,7 @@
   .benefit-card {
     @apply bg-gradient-card rounded-3xl p-8 shadow-medium border border-border/50;
     @apply transition-all duration-500 hover:shadow-strong hover:-translate-y-2 hover:border-primary/30;
-    @apply backdrop-blur-sm relative overflow-hidden group;
+    @apply backdrop-blur-sm relative overflow-hidden;
   }
 
   .benefit-card::before {
@@ -205,14 +205,14 @@
   .step-card {
     @apply bg-gradient-tech rounded-2xl p-8 relative;
     @apply border border-border/50 transition-all duration-500 hover:shadow-medium hover:-translate-y-1;
-    @apply backdrop-blur-sm overflow-hidden group;
+    @apply backdrop-blur-sm overflow-hidden;
   }
 
   /* Enhanced plan cards with premium styling */
   .plan-card {
     @apply bg-gradient-card rounded-3xl p-10 border-2 border-border/50 relative overflow-hidden;
     @apply transition-all duration-500 hover:border-primary/50 hover:shadow-strong hover:-translate-y-1;
-    @apply backdrop-blur-sm group;
+    @apply backdrop-blur-sm;
   }
 
   .plan-card::after {
