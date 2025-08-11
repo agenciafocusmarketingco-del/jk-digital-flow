@@ -67,6 +67,7 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
 				'gradient-overlay': 'var(--gradient-overlay)',
+				'gradient-tech': 'var(--gradient-tech)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
