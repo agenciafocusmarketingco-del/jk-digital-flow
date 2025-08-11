@@ -1,5 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
-import jkLogo from "@/assets/jk-logo.png";
+const jkLogo = "/lovable-uploads/5350b787-e3da-4013-96c6-865a450987cf.png";
 
 const Footer = () => {
   return (

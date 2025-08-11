@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import jkLogo from "@/assets/jk-logo.png";
+const jkLogo = "/lovable-uploads/5350b787-e3da-4013-96c6-865a450987cf.png";
 
 const Header = () => {
   const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
