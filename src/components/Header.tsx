@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import LogoProcessor from "./LogoProcessor";
 const jkLogo = "/lovable-uploads/7cf55bc2-cce6-4b2f-b9fa-393116140e5a.png";
 
 const Header = () => {
-  const [processedLogoUrl, setProcessedLogoUrl] = useState<string>(jkLogo);
   const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
 
   return (
@@ -13,10 +10,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-4 animate-slide-in-left">
             <div className="relative">
-              <LogoProcessor
-                originalLogoUrl={jkLogo}
-                onProcessed={setProcessedLogoUrl}
-                alt="JK Certificadora Digital"
+              <img 
+                src={jkLogo} 
+                alt="JK Certificadora Digital" 
                 className="h-12 w-12 transition-transform duration-300 hover:scale-110"
               />
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full animate-glow"></div>
