@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-const jkLogo = "/lovable-uploads/f1687134-7632-4a4b-999a-0f592890d912.png";
+const JKcorreta = "/lovable-uploads/f1687134-7632-4a4b-999a-0f592890d912.png";
 
 const Header = () => {
   const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
@@ -11,7 +11,7 @@ const Header = () => {
           <div className="flex items-center space-x-4 animate-slide-in-left">
             <div className="relative">
               <img 
-                src={jkLogo} 
+                src={JKcorreta} 
                 alt="JK Certificadora Digital" 
                 className="h-16 w-16 transition-transform duration-300 hover:scale-110"
               />

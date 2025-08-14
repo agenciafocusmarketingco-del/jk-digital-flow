@@ -1,5 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
-const jkLogo = "/lovable-uploads/7cf55bc2-cce6-4b2f-b9fa-393116140e5a.png";
+const JKcorreta = "/lovable-uploads/7cf55bc2-cce6-4b2f-b9fa-393116140e5a.png";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <img 
-                src={jkLogo} 
+                src={JKcorreta} 
                 alt="JK Certificadora Digital" 
                 className="h-10 w-10 brightness-0 invert"
               />
