@@ -2,13 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Award, Users, Video } from "lucide-react";
 import heroImage from "@/assets/hero-video-call.jpg";
-
 const Hero = () => {
   const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
   const agendamentoCTA = "https://calendly.com/jkcert/atendimento";
-
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary via-white to-accent/5">
+  return <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary via-white to-accent/5">
       {/* Background tech pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary))_1px,transparent_1px)] bg-[length:50px_50px]"></div>
@@ -38,10 +35,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button 
-                asChild
-                className="btn-hero text-xl px-12 py-6 group"
-              >
+              <Button asChild className="btn-hero text-xl px-12 py-6 group">
                 <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
                   <span className="flex items-center gap-3">
                     Emitir no WhatsApp
@@ -52,17 +46,8 @@ const Hero = () => {
                 </a>
               </Button>
               
-              <Button 
-                asChild
-                variant="outline"
-                className="btn-secondary text-xl px-12 py-6 group"
-              >
-                <a href={agendamentoCTA} target="_blank" rel="noopener noreferrer">
-                  <span className="flex items-center gap-3">
-                    Agendar Videoconferência
-                    <Video className="w-5 h-5 transition-transform group-hover:scale-110" />
-                  </span>
-                </a>
+              <Button asChild variant="outline" className="btn-secondary text-xl px-12 py-6 group">
+                
               </Button>
             </div>
 
@@ -88,11 +73,7 @@ const Hero = () => {
 
           <div className="relative animate-scale-in">
             <div className="relative rounded-3xl overflow-hidden shadow-strong group">
-              <img 
-                src={heroImage} 
-                alt="Pessoa em videoconferência para emissão de certificado digital"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <img src={heroImage} alt="Pessoa em videoconferência para emissão de certificado digital" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-graphite/10 to-transparent"></div>
             </div>
@@ -101,10 +82,14 @@ const Hero = () => {
             <div className="absolute -top-6 -right-6 bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-strong animate-float">
               <Shield className="w-10 h-10 text-primary" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-strong animate-float" style={{animationDelay: '1s'}}>
+            <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-strong animate-float" style={{
+            animationDelay: '1s'
+          }}>
               <Award className="w-10 h-10 text-accent" />
             </div>
-            <div className="absolute top-1/2 -left-4 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-medium animate-float" style={{animationDelay: '2s'}}>
+            <div className="absolute top-1/2 -left-4 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-medium animate-float" style={{
+            animationDelay: '2s'
+          }}>
               <Users className="w-8 h-8 text-primary" />
             </div>
             
@@ -113,8 +98,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
