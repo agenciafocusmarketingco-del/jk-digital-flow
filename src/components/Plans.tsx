@@ -106,8 +106,8 @@ const Plans = () => {
               asChild
               className="btn-secondary w-full"
             >
-              <a href={agendamentoCTA} target="_blank" rel="noopener noreferrer">
-                Agendar Videoconferência
+              <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
+                Emitir no WhatsApp
               </a>
             </Button>
           </div>
