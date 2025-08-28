@@ -43,9 +43,9 @@ const FinalCTA = () => {
               size="lg"
               className="bg-white/10 backdrop-blur-sm border-3 border-white text-white hover:bg-white hover:text-primary font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105"
             >
-              <a href={agendamentoCTA} target="_blank" rel="noopener noreferrer">
+              <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
                 <span className="flex items-center gap-3">
-                  Agendar Videoconferência
+                  Emitir no Whatsapp
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
               </a>
