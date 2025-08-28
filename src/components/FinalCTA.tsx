@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const FinalCTA = () => {
-  const whatsappCTA = "https://wa.me/5511999998888?text=Ol%C3%A1%2C%20tudo%20bem%3F%20%F0%9F%91%8B%20Gostaria%20de%20saber%20mais%20sobre%20a%20certifica%C3%A7%C3%A3o%20digital%20com%20a%20JK%20Certificadora.";
+
+  const whatsappCTA =
+  /Android|iPhone/i.test(navigator.userAgent)
+    ? "whatsapp://send?phone=5511999998888&text=Ol%C3%A1%2C%20tudo%20bem%3F%20%F0%9F%91%8B%20Gostaria%20de%20saber%20mais%20sobre%20a%20certifica%C3%A7%C3%A3o%20digital%20com%20a%20JK%20Certificadora."
+    : "https://api.whatsapp.com/send?phone=5511999998888&text=Ol%C3%A1%2C%20tudo%20bem%3F%20%F0%9F%91%8B%20Gostaria%20de%20saber%20mais%20sobre%20a%20certifica%C3%A7%C3%A3o%20digital%20com%20a%20JK%20Certificadora.";
+
   const agendamentoCTA = "https://calendly.com/jkcert/atendimento";
 
   return (
