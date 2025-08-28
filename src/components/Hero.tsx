@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Shield, Award, Users, Video } from "lucide-react";
 import heroImage from "@/assets/hero-video-call.jpg";
 const Hero = () => {
-  const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
+  const whatsappCTA = "https://wa.me/5511999998888?text=Ol%C3%A1%2C%20tudo%20bem%3F%20%F0%9F%91%8B%20Gostaria%20de%20saber%20mais%20sobre%20a%20certifica%C3%A7%C3%A3o%20digital%20com%20a%20JK%20Certificadora.";
   const agendamentoCTA = "https://calendly.com/jkcert/atendimento";
   return <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary via-white to-accent/5">
       {/* Background tech pattern */}
