@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const FinalCTA = () => {
   const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
   const agendamentoCTA = "https://calendly.com/jkcert/atendimento";
-
-  return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+  return <section className="py-24 bg-gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-accent/95"></div>
       
       {/* Tech grid pattern */}
@@ -24,11 +21,7 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
-            <Button 
-              asChild
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
                 <span className="flex items-center gap-3">
                   Emitir no WhatsApp
@@ -37,18 +30,8 @@ const FinalCTA = () => {
               </a>
             </Button>
             
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="bg-white/10 backdrop-blur-sm border-3 border-white text-white hover:bg-white hover:text-primary font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105"
-            >
-              <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
-                <span className="flex items-center gap-3">
-                  Emitir no Whatsapp
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                </span>
-              </a>
+            <Button asChild variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-3 border-white text-white hover:bg-white hover:text-primary font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105">
+              
             </Button>
           </div>
 
@@ -57,8 +40,6 @@ const FinalCTA = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FinalCTA;
