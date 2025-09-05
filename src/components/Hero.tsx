@@ -47,12 +47,7 @@ const Hero = () => {
               </Button>
               
               <Button asChild variant="outline" className="btn-secondary btn-mobile text-base sm:text-lg lg:text-xl group">
-                <a href={agendamentoCTA} target="_blank" rel="noopener noreferrer">
-                  <span className="flex items-center gap-3">
-                    Agendar Videoconferência
-                    <Video className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
-                  </span>
-                </a>
+                
               </Button>
             </div>
 

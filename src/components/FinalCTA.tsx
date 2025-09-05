@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const FinalCTA = () => {
   const whatsappCTA = "https://wa.me/5511999998888?text=Ol%C3%A1%2C%20tudo%20bem%3F%20%F0%9F%91%8B%20Gostaria%20de%20saber%20mais%20sobre%20a%20certifica%C3%A7%C3%A3o%20digital%20com%20a%20JK%20Certificadora.";
   const agendamentoCTA = "https://calendly.com/jkcert/atendimento";
-
-  return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+  return <section className="py-24 bg-gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-accent/95"></div>
       
       {/* Tech grid pattern */}
@@ -24,11 +21,7 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex flex-col gap-4 sm:gap-6 max-w-md mx-auto">
-            <Button 
-              asChild
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-black px-8 py-6 sm:px-12 sm:py-8 text-lg sm:text-xl rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full min-h-[64px]"
-            >
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-black px-8 py-6 sm:px-12 sm:py-8 text-lg sm:text-xl rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full min-h-[64px]">
               <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
                 <span className="flex items-center justify-center gap-3">
                   Emitir no WhatsApp
@@ -37,19 +30,8 @@ const FinalCTA = () => {
               </a>
             </Button>
             
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary font-black px-8 py-6 sm:px-12 sm:py-8 text-lg sm:text-xl rounded-full group transition-all duration-300 hover:scale-105 w-full min-h-[64px]"
-            >
-              <a href={agendamentoCTA} target="_blank" rel="noopener noreferrer">
-                <span className="flex items-center justify-center gap-3">
-                  <span className="hidden sm:inline">Agendar Videoconferência</span>
-                  <span className="sm:hidden">Agendar Chamada</span>
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                </span>
-              </a>
+            <Button asChild variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary font-black px-8 py-6 sm:px-12 sm:py-8 text-lg sm:text-xl rounded-full group transition-all duration-300 hover:scale-105 w-full min-h-[64px]">
+              
             </Button>
           </div>
 
@@ -58,8 +40,6 @@ const FinalCTA = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FinalCTA;
