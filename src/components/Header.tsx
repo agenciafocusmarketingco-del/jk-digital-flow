@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 const JKcorreta = "/lovable-uploads/98bd959d-14f2-42e4-9880-93b14c5004d7.png";
 
 const Header = () => {
-  const whatsappCTA = "https://wa.me/5511996672702?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
+  const whatsappCTA = "https://wa.me/5511921302110?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JK%20Certificadora.%20Quero%20emitir%20meu%20certificado%20digital%20online.%20Pode%20me%20ajudar%3F";
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-border/50 shadow-soft">
