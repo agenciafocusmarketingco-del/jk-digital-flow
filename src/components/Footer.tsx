@@ -17,7 +17,7 @@ const Footer = () => {
               <img 
                 src={jkLogo} 
                 alt="JK Certificadora Digital" 
-                className="h-8 w-8 sm:h-10 sm:w-10 brightness-0 invert"
+                className="h-8 w-8 sm:h-10 sm:w-10"
               />
               <div>
                 <h3 className="text-lg sm:text-xl font-poppins font-bold">JK Certificadora</h3>
