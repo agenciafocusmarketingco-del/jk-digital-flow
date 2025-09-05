@@ -72,13 +72,13 @@ const Footer = () => {
               </a>
               
               <a 
-                href="https://wa.me/5511996672702" 
+                href="https://wa.me/5511921302110" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center md:justify-start gap-3 text-sm sm:text-base text-white/80 hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                +55 11 99667-2702
+                +55 11 92130-2110
               </a>
             </div>
           </div>
