@@ -7,19 +7,19 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-border/50 shadow-soft">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center space-x-4 animate-slide-in-left">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <div className="flex items-center space-x-2 sm:space-x-4 animate-slide-in-left">
             <div className="relative">
               <img 
                 src={JKcorreta} 
                 alt="JK Certificadora Digital" 
-                className="h-16 w-16 transition-transform duration-300 hover:scale-110"
+                className="h-12 w-12 sm:h-16 sm:w-16 transition-transform duration-300 hover:scale-110"
               />
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full animate-glow"></div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-primary rounded-full animate-glow"></div>
             </div>
             <div>
-              <h1 className="text-xl font-poppins font-black text-graphite tracking-tight">JK Certificadora</h1>
-              <p className="text-sm text-primary font-semibold">AR Credenciada • SyngularID</p>
+              <h1 className="text-sm sm:text-xl font-poppins font-black text-graphite tracking-tight">JK Certificadora</h1>
+              <p className="text-xs sm:text-sm text-primary font-semibold">AR Credenciada • SyngularID</p>
             </div>
           </div>
           
@@ -45,10 +45,11 @@ const Header = () => {
           <div className="animate-fade-in-up">
             <Button 
               asChild
-              className="btn-hero text-base font-bold"
+              className="btn-hero text-sm sm:text-base font-bold px-4 py-2 sm:px-6 sm:py-3"
             >
               <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
-                Emitir no WhatsApp
+                <span className="hidden sm:inline">Emitir no WhatsApp</span>
+                <span className="sm:hidden">WhatsApp</span>
               </a>
             </Button>
           </div>

@@ -139,15 +139,15 @@
   }
 
   h1 {
-    @apply text-4xl lg:text-6xl font-black;
+    @apply text-3xl sm:text-4xl lg:text-6xl font-black leading-tight;
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl font-bold;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight;
   }
 
   h3 {
-    @apply text-xl lg:text-2xl font-bold;
+    @apply text-lg sm:text-xl lg:text-2xl font-bold leading-tight;
   }
 
   p {
@@ -155,17 +155,49 @@
   }
 
   .text-body {
-    @apply text-base lg:text-lg leading-relaxed text-muted-foreground;
+    @apply text-sm sm:text-base lg:text-lg leading-relaxed text-muted-foreground;
+  }
+
+  /* Mobile-specific optimizations */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
   }
 }
 
 @layer components {
   /* Hero button with enhanced pill design and premium effects */
   .btn-hero {
-    @apply bg-gradient-primary text-white font-bold px-10 py-4 rounded-full;
+    @apply bg-gradient-primary text-white font-bold px-6 py-4 sm:px-10 sm:py-4 rounded-full;
     @apply transition-all duration-300 hover:shadow-strong hover:scale-[1.02] hover:-translate-y-0.5;
     @apply focus:outline-none focus:ring-2 focus:ring-primary/30 active:scale-[0.98];
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden w-full sm:w-auto text-center min-h-[56px] flex items-center justify-center;
+  }
+  
+  /* Smooth spacing for mobile sections */
+  .section-spacing {
+    @apply py-12 sm:py-16 lg:py-24;
+  }
+  
+  .section-spacing-small {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+  
+  /* Mobile touch improvements */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Mobile text optimization */
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black leading-tight;
+  }
+  
+  .mobile-subheading {
+    @apply text-lg sm:text-xl lg:text-2xl font-bold leading-tight;
+  }
+  
+  .mobile-body {
+    @apply text-sm sm:text-base lg:text-lg leading-relaxed;
   }
 
   .btn-hero::before {
@@ -180,9 +212,10 @@
 
   /* Secondary CTA button with modern glass effect */
   .btn-secondary {
-    @apply bg-white/90 backdrop-blur-sm border-2 border-primary/30 text-primary font-bold px-10 py-4 rounded-full;
+    @apply bg-white/90 backdrop-blur-sm border-2 border-primary/30 text-primary font-bold px-6 py-4 sm:px-10 sm:py-4 rounded-full;
     @apply transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-medium hover:border-primary;
     @apply focus:outline-none focus:ring-2 focus:ring-primary/30 hover:scale-[1.02] hover:-translate-y-0.5;
+    @apply w-full sm:w-auto text-center min-h-[56px] flex items-center justify-center;
   }
 
   /* Enhanced benefit cards with tech-corporate styling */

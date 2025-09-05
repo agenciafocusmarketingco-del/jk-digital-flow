@@ -16,23 +16,23 @@ const FinalCTA = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
-          <h2 className="text-4xl lg:text-6xl font-poppins font-black text-white mb-8 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-poppins font-black text-white mb-6 sm:mb-8 tracking-tight leading-tight">
             Pronto para emitir seu certificado digital?
           </h2>
-          <p className="text-2xl lg:text-3xl text-white/95 mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white/95 mb-8 sm:mb-12 leading-relaxed">
             Simples, rápido e seguro. Comece agora mesmo!
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 justify-center">
+          <div className="flex flex-col gap-4 sm:gap-6 max-w-md mx-auto">
             <Button 
               asChild
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-white text-primary hover:bg-white/90 font-black px-8 py-6 sm:px-12 sm:py-8 text-lg sm:text-xl rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full min-h-[64px]"
             >
               <a href={whatsappCTA} target="_blank" rel="noopener noreferrer">
-                <span className="flex items-center gap-3">
+                <span className="flex items-center justify-center gap-3">
                   Emitir no WhatsApp
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
               </a>
             </Button>
@@ -41,18 +41,19 @@ const FinalCTA = () => {
               asChild
               variant="outline"
               size="lg"
-              className="bg-white/10 backdrop-blur-sm border-3 border-white text-white hover:bg-white hover:text-primary font-black px-12 py-8 text-xl rounded-full group transition-all duration-300 hover:scale-105"
+              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary font-black px-8 py-6 sm:px-12 sm:py-8 text-lg sm:text-xl rounded-full group transition-all duration-300 hover:scale-105 w-full min-h-[64px]"
             >
               <a href={agendamentoCTA} target="_blank" rel="noopener noreferrer">
-                <span className="flex items-center gap-3">
-                  Agendar Videoconferência
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <span className="flex items-center justify-center gap-3">
+                  <span className="hidden sm:inline">Agendar Videoconferência</span>
+                  <span className="sm:hidden">Agendar Chamada</span>
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
               </a>
             </Button>
           </div>
 
-          <p className="text-white/90 text-lg lg:text-xl mt-12 font-semibold">
+          <p className="text-white/90 text-sm sm:text-base lg:text-lg xl:text-xl mt-8 sm:mt-12 font-semibold leading-relaxed">
             ✓ Atendimento humanizado • ✓ Suporte completo • ✓ Validade jurídica garantida
           </p>
         </div>
